@@ -22,7 +22,11 @@ from io import BytesIO, StringIO
 from typing import Callable, Dict, List, Optional, Set, Tuple, cast
 
 import numpy.distutils
-from typing_extensions import Protocol
+
+try:
+    from typing import Protocol
+except ImportError:
+    from typing_extensions import Protocol
 
 # we will abuse the lockfile mechanism when reading and writing the registry
 from aesara.compile.compilelock import lock_ctx

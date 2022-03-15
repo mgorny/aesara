@@ -1,7 +1,10 @@
 from abc import abstractmethod
 from typing import Any, Optional, Text, TypeVar, Union
 
-from typing_extensions import TypeAlias
+try:
+    from typing import TypeAlias
+except ImportError:
+    from typing_extensions import TypeAlias
 
 from aesara.graph import utils
 from aesara.graph.basic import Constant, Variable

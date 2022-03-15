@@ -19,7 +19,11 @@ from textwrap import dedent
 from typing import Dict, Mapping, Optional, Tuple, Type, Union
 
 import numpy as np
-from typing_extensions import TypeAlias
+
+try:
+    from typing import TypeAlias
+except ImportError:
+    from typing_extensions import TypeAlias
 
 import aesara
 from aesara import printing

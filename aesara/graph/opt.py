@@ -19,7 +19,10 @@ from functools import _compose_mro, partial, reduce  # type: ignore
 from itertools import chain
 from typing import Dict, List, Optional, Sequence, Tuple, Union
 
-from typing_extensions import TypeAlias
+try:
+    from typing import TypeAlias
+except ImportError:
+    from typing_extensions import TypeAlias
 
 import aesara
 from aesara.configdefaults import config

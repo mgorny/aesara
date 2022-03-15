@@ -18,4 +18,4 @@ diff-cover
 pre-commit
 isort
 packaging
-typing_extensions
+typing_extensions; python_version<"3.10"

@@ -14,7 +14,10 @@ from typing import (
     cast,
 )
 
-from typing_extensions import Literal
+try:
+    from typing import Literal
+except ImportError:
+    from typing_extensions import Literal
 
 import aesara
 from aesara.configdefaults import config

@@ -52,7 +52,7 @@ install_requires = [
     "logical-unification",
     "miniKanren",
     "cons",
-    "typing_extensions",
+    "typing_extensions; python_version<\"3.10\"",
 ]
 
 
